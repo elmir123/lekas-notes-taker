@@ -13,7 +13,7 @@ You can delete the note by clicking on the bin icon next to the title of the not
 
 The following image demonstrates the web application's appearance:
 
-![lekas note taker.](./assets/imgs/screen1.png)
+![lekas note taker.](./public/assets/imgs/screen1.png)
 
 To view the working app use the link below:
 

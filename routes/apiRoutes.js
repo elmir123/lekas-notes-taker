@@ -16,7 +16,7 @@ module.exports = (app) => {
     notes.forEach((note, index) => {
         note.id = index + 1;
     });    
-    fs.writeFile(path.join(__dirname, 'db/db.json'), JSON.stringify(notes), (err) => {
+    fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(notes), (err) => {
         if (err) throw err;
       });
     res.end();

@@ -21,6 +21,12 @@ module.exports = (app) => {
       });
     res.end();
   });
-
-
+  
+  app.delete('/api/notes/:id', (req, res) => {
+    var filteredNotes = notes.filter((note) => { return String(note.id) !== req.params.id });   
+    fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(filteredNotes), (err) => {
+        if (err) throw err;
+      });
+    res.end();
+  });
 };

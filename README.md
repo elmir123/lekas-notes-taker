@@ -15,8 +15,6 @@ The following image demonstrates the web application's appearance:
 
 ![lekas note taker.](./public/assets/imgs/screen1.png)
 
-To view the working app use the link below:
-
 This application was posted on Huroku.
 You can view demo of this application here:
 https://lekas-note-taker.herokuapp.com/notes.

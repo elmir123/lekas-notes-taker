@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// static pages handle url
+// static files handle url configuration
+// all static files will respond by using "/static" ahead of the files
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 // ROUTER

@@ -59,7 +59,6 @@ const renderActiveNote = () => {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
-    console.log("here 35");
     noteTitle.value = '';
     noteText.value = '';
     noteTitle.removeAttribute('readonly');
@@ -90,7 +89,6 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
-    console.log(noteId);
     getAndRenderNotes();
     renderActiveNote();
   });

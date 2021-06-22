@@ -1,7 +1,7 @@
 // LOAD DATA
 const path = require('path');
 const fs = require('fs')
-const notes = require('../db/db.json');
+let notes = require('../db/db.json');
 
 // ROUTING
 
@@ -23,8 +23,8 @@ module.exports = (app) => {
   });
   
   app.delete('/api/notes/:id', (req, res) => {
-    var filteredNotes = notes.filter((note) => { return String(note.id) !== req.params.id });   
-    fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(filteredNotes), (err) => {
+    notes = notes.filter((note) => { return String(note.id) !== req.params.id });    
+    fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(notes), (err) => {
         if (err) throw err;
       });
     res.end();
